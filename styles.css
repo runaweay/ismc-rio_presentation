@@ -1,0 +1,167 @@
+/* ---- Font ---- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.reveal {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2 {
+  color: #8B7355; /* burlywood4 */
+  font-weight: 700;
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.reveal blockquote {
+  border-left: 4px solid #8B7355; /* burlywood4 */
+  background-color: #EECFA1; /* navajowhite2 */
+  padding: 0.6em 1em;
+  font-style: italic;
+}
+
+/* Body text justified; headings stay centered */
+.reveal .slides section {
+  text-align: justify;
+  display: block !important;
+}
+
+.reveal .slides section > h1,
+.reveal .slides section > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.9em;
+}
+
+/* Title slide: h1.title, h1.subtitle, h2.author, h3.date inside
+   <section id="title-slide">. Do NOT set position/transform on the
+   section itself -- reveal.js uses its own inline transform to slide
+   sections on/off screen, and overriding it traps the slide on top of
+   the others. Only text-align/margins are used here. */
+#title-slide,
+.reveal .slides > section:first-child {
+  text-align: center !important;
+}
+
+#title-slide .title,
+.reveal h1.title {
+  color: #8B7355 !important;
+  font-weight: 700;
+  font-size: 1.5em !important;
+  margin-top: 10vh !important; /* higher up than before, but not at the very top */
+  margin-bottom: 0.3em;
+  text-align: center !important;
+}
+
+#title-slide .subtitle,
+.reveal h1.subtitle {
+  color: #8B7355 !important;
+  font-size: 0.9em !important;
+  font-weight: 700;
+  margin-top: 0 !important;
+  margin-bottom: 0.6em;
+  text-align: center !important;
+}
+
+#title-slide .author,
+#title-slide .date,
+.reveal h2.author,
+.reveal h3.date {
+  color: #000000 !important;
+  font-size: 0.5em !important;
+  font-weight: normal !important;
+  margin: 1em 0;
+  text-align: center !important;
+}
+
+#title-slide .author,
+.reveal h2.author {
+  margin-top: 1.2em !important; /* reduced so the whole block fits with affiliations + logos */
+}
+
+/* Affiliations block (a, b, c... footnotes) */
+.title-affiliations {
+  font-size: 0.26em;
+  line-height: 1.4;
+  color: #555555;
+  text-align: center;
+  margin-top: 4em;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-affiliations sup {
+  font-weight: 700;
+  color: #8B7355;
+}
+
+/* Logos */
+.title-logos {
+  position: static;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.title-logos img {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.title-logos img.logo-wide {
+  height: 34px;
+}
+
+/* Line spacing (1.5) applied to all body text across every slide */
+.reveal .slides section p,
+.reveal .slides section ul,
+.reveal .slides section ol {
+  line-height: 1.5;
+}
+
+.reveal .slides section ul li,
+.reveal .slides section ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Methods slide: text + image side by side. max-height (not just
+   max-width) keeps a tall/portrait photo from overflowing the slide
+   and getting cut off. */
+.methods-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.methods-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+
+.methods-sampling-text {
+  font-size: 0.62em;
+  text-align: left;
+}
+
+.methods-sampling-text ul {
+  margin: 0.3em 0 0.8em 1.2em;
+}
+
+.methods-text {
+  text-align: left;
+  font-size: 0.75em;
+}
+
+.methods-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
