@@ -6,14 +6,14 @@
 }
 
 .reveal h1, .reveal h2 {
-  color: #8B7355; /* burlywood4 */
+  color: #634736; /* burlywood4 */
   font-weight: 700;
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .reveal blockquote {
   border-left: 4px solid #8B7355; /* burlywood4 */
-  background-color: #EECFA1; /* navajowhite2 */
+  background-color: #FFE9BB; /* navajowhite2 */
   padding: 0.6em 1em;
   font-style: italic;
 }
@@ -28,7 +28,7 @@
 .reveal .slides section > h2 {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0.9em;
+  margin-bottom: 0.5em;
 }
 
 /* Title slide: h1.title, h1.subtitle, h2.author, h3.date inside
@@ -43,9 +43,9 @@
 
 #title-slide .title,
 .reveal h1.title {
-  color: #8B7355 !important;
+  color: #634736 !important;
   font-weight: 700;
-  font-size: 1.5em !important;
+  font-size: 1.6em !important;
   margin-top: 10vh !important; /* higher up than before, but not at the very top */
   margin-bottom: 0.3em;
   text-align: center !important;
@@ -53,7 +53,7 @@
 
 #title-slide .subtitle,
 .reveal h1.subtitle {
-  color: #8B7355 !important;
+  color: #815D46 !important;
   font-size: 0.9em !important;
   font-weight: 700;
   margin-top: 0 !important;
@@ -64,17 +64,29 @@
 #title-slide .author,
 #title-slide .date,
 .reveal h2.author,
-.reveal h3.date {
+.reveal h3.date,
+.reveal .date,
+.reveal p.date {
   color: #000000 !important;
-  font-size: 0.5em !important;
+  font-size: 0.3em !important;
   font-weight: normal !important;
   margin: 1em 0;
   text-align: center !important;
 }
+.reveal .quarto-title-author-name,
+#title-slide .quarto-title-author-name {
+  font-size: 0.45em !important;
+  color: #000000 !important;
+  font-weight: normal !important;
+}
 
 #title-slide .author,
-.reveal h2.author {
-  margin-top: 1.2em !important; /* reduced so the whole block fits with affiliations + logos */
+#title-slide .date,
+.reveal h2.author,
+.reveal h3.date {
+  ...
+}
+{margin-top: 1.2em !important; /* reduced so the whole block fits with affiliations + logos */
 }
 
 /* Affiliations block (a, b, c... footnotes) */
@@ -102,18 +114,23 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 25px;
 }
-
 .title-logos img {
-  height: 50px;
+  height: 65px;   /* eram 50px */
   width: auto;
   max-width: 200px;
   object-fit: contain;
 }
-
 .title-logos img.logo-wide {
-  height: 34px;
+  height: 45px;   /* eram 34px */
+}
+.funding-text {
+  font-size: 0.28em;
+  color: #555555;
+  max-width: 160px;
+  text-align: left;
+  line-height: 1.3;
 }
 
 /* Line spacing (1.5) applied to all body text across every slide */
@@ -131,37 +148,25 @@
 /* Methods slide: text + image side by side. max-height (not just
    max-width) keeps a tall/portrait photo from overflowing the slide
    and getting cut off. */
+
 .methods-layout {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: flex-start;
 }
-
 .methods-col {
+  flex: 1.2;
+  min-width: 0;
+}
+.methods-col-images {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  min-width: 0;
+  gap: 12px;
 }
-
-.methods-sampling-text {
-  font-size: 0.62em;
-  text-align: left;
-}
-
-.methods-sampling-text ul {
-  margin: 0.3em 0 0.8em 1.2em;
-}
-
-.methods-text {
-  text-align: left;
-  font-size: 0.75em;
-}
-
 .methods-img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
   border-radius: 6px;
 }

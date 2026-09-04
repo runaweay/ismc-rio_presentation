@@ -2,15 +2,15 @@
 title: "Carbon patterns in anthropogenic sealed urban soils"
 subtitle: "A pilot study"
 author: "Mariana Dos Santos Moreno<sup>a,b</sup>, Moreen Willaredt<sup>c,d</sup>, Pablo Pastén<sup>b,e</sup>, Pilar Gil<sup>a</sup>, Alejandra Vega<sup>b</sup>, Sara E. Acevedo<sup>a,b</sup>"
-date: "September 2026"
-output:
-  revealjs::revealjs_presentation:
+format:
+  revealjs:
+    date-format: "MMMM, YYYY"
     theme: simple
-    highlight: pygments
+    highlight-style: pygments
     center: false
     transition: slide
-    slide_level: 2
-    self_contained: true
+    slide-level: 2
+    embed-resources: true
     css: styles.css
 ---
 
@@ -59,31 +59,25 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ## Methods {.spaced-list}
 
 <div class="methods-layout">
-<div class="methods-col">
+<div class="methods-col methods-col-text">
 <div class="methods-sampling-text">
 - Rio-pav (paved soils) - Bellas Artes, Santiago, Chile - 3 sampling sites;
 
 - Rio-ug (urban green space soils) - Cerro Santa Lucía and Parque Forestal, Santiago, Chile - 2 sampling sites.
 </div>
-
-```{r sampling-map, echo=FALSE}
-library(leaflet)
-leaflet(width = "100%", height = "220px") %>%
-  addTiles() %>%
-  addMarkers(lng = -70.643330, lat = -33.437043, popup = "Rio-PAV 1") %>%
-  addMarkers(lng = -70.644514, lat = -33.435859, popup = "Rio-PAV 2") %>%
-  addMarkers(lng = -70.647190, lat = -33.437729, popup = "Rio-PAV 3") %>%
-  setView(lng = -70.645, lat = -33.4365, zoom = 14)
-```
 </div>
 
-<div class="methods-col">
+<div class="methods-col methods-col-text">
 <div class="methods-text">
 - Soil samples: air-dried, sieved (< 2 mm), analyzed in triplicate;
 - Texture: determined after OM removal (H2O2, 30%), using a PARIO suspension pressure sensor;
 - pH: measured at 1:2.5 ratio;
 - Total C: high-temperature catalytic combustion (TOC-L analyzer, Shimadzu, Japan).
 </div>
+</div>
+
+<div class="methods-col methods-col-images">
+<img src="plots/puntos.png" alt="Sampling points map" class="methods-img">
 <img src="parque-florestal.jpeg" alt="Sampling site" class="methods-img">
 </div>
 </div>
@@ -161,7 +155,8 @@ document.addEventListener('DOMContentLoaded', function () {
     logos.innerHTML =
       '<img src="cedeus-color.png" alt="CEDEUS logo" class="logo-square">' +
       '<img src="fasn-logo.png" alt="Facultad de Agronomía y Sistemas Naturales logo" class="logo-wide">' +
-      '<img src="ismc-logo.png" alt="ISMC logo">';
+      '<img src="ismc-logo.png" alt="ISMC logo">' +
+      '<span class="funding-text">Project funded by FONDECYT, 11260726FINI</span>';
     titleSlide.appendChild(logos);
   }
 });
