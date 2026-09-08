@@ -38,10 +38,10 @@ p <- ggplot(st_long, aes(x = variable, y = valor)) +
   facet_wrap(~ variable, scales = "free") +
   labs(x = NULL, y = NULL,
        title = "Steinfort et al. (2020)") +
-  theme_bw(base_size = 24) +
+  theme_bw(base_size = 20) +
   theme(panel.grid.minor = element_blank(),
         axis.text.x = element_blank(), axis.ticks.x = element_blank(),
-        strip.background = element_rect(fill = "grey95", colour = NA))
-
+        strip.background = element_rect(fill = "grey95", colour = NA),
+        plot.title = element_text(size = 20, face = "plain", hjust = 0))
 p
 ggsave("plots/steinfort.png", p, width = 11, height = 4, dpi = 300)

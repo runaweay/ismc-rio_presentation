@@ -56,41 +56,35 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 - To determine whether sealing drives C accumulation or depletion along the soil profile.
 
-## Methods {.spaced-list}
+## Methods {.methods-slide}
 
-<div class="methods-layout">
-<div class="methods-col methods-col-text">
-<div class="methods-sampling-text">
-- Rio-pav (paved soils) - Bellas Artes, Santiago, Chile - 3 sampling sites;
+::::: methods-grid
+::: methods-text-area
+**Sampling sites**
 
-- Rio-ug (urban green space soils) - Cerro Santa Lucía and Parque Forestal, Santiago, Chile - 2 sampling sites.
-</div>
-</div>
+- Rio-pav (paved soils) - Bellas Artes, Santiago, Chile - 3 sites;
+- Rio-ug (urban green space soils) - Cerro Santa Lucía and Parque Forestal, Santiago, Chile - 2 sites.
 
-<div class="methods-col methods-col-text">
-<div class="methods-text">
-- Soil samples: air-dried, sieved (< 2 mm), analyzed in triplicate;
-- Texture: determined after OM removal (H2O2, 30%), using a PARIO suspension pressure sensor;
+**Analyses**
+
+- Soil samples: air-dried, sieved (\< 2 mm), analyzed in triplicate;
+- Texture: determined after OM removal (H2O2, 30%), PARIO sensor;
 - pH: measured at 1:2.5 ratio;
-- Total C: high-temperature catalytic combustion (TOC-L analyzer, Shimadzu, Japan).
-</div>
-</div>
+- Total C: high-temperature catalytic combustion (TOC-L, Shimadzu, Japan).
+:::
 
-<div class="methods-col methods-col-images">
-<img src="plots/puntos.png" alt="Sampling points map" class="methods-img">
-<img src="parque-florestal.jpeg" alt="Sampling site" class="methods-img">
-</div>
-</div>
+::: methods-image-area
+<img src="plots/puntos.png" alt="Sampling points map"/>
+:::
+:::::
 
 ## Results
 
-<div style="text-align:left;">
-\- Salvando para inserir la distribución vertical de C aquí;
+![](plots/dotplot_mean_se.png){fig-align="center" width="920"}
 
-- Sealed vs. unsealed C profiles by depth;
-- Texture and pH by site;
-- Statistical comparison (sealed vs. unsealed, by depth).
-</div>
+## Results - Chilean soils background
+
+![](plots/steinfort.png){fig-align="center" width="700"}
 
 ## Implications for urban C budgets {.spaced-list}
 
@@ -100,7 +94,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 ## References {.spaced-list}
 
-<div style="font-size:0.55em; text-align:left;">
+::: {style="font-size:0.55em; text-align:left;"}
 Lehmann, A. (2006). Technosols and other proposals on urban soils for the WRB (World Reference Base for Soil Resources). *Int. Agrophys., 20*(2), 129–134
 
 Liu, H., Tan, X., Xiao, R., Tian, P., He, X., Wang, J., & Li, Y. (2026). Global patterns of urban soil degradation: Revealing the impacts of urbanization on natural and sealed urban soils. *Ecological Indicators*, *185*, 114755. https://doi.org/10.1016/j.ecolind.2026.114755
@@ -110,9 +104,7 @@ Lu, C., Kotze, D. J., & Setälä, H. M. (2020). Soil sealing causes substantial 
 O'Riordan, R., Davies, J., Stevens, C., and Quinton, J. N. (2020). The effects of sealing on urban soil carbon and nutrients, *SOIL*, *7*, 661–675, https://doi.org/10.5194/soil-7-661-2021
 
 Pereira, M.C., O’Riordan, R. & Stevens, C. 2021. Urban soil microbial community and microbial-related carbon storage are severely limited by sealing. *J Soils Sediments 21*, 1455–1465. https://doi.org/10.1007/s11368-021-02881-7
-
-
-</div>
+:::
 
 ## Questions?
 
@@ -122,12 +114,13 @@ Pereira, M.C., O’Riordan, R. & Stevens, C. 2021. Urban soil microbial communit
 
 **Mariana Dos Santos Moreno**
 
-Email: mdsmoreno@estudiante.uc.cl
+*mdsmoreno\@estudiante.uc.cl*
 
 Facultad de Agronomía y Sistemas Naturales, PUC Chile
 
 CEDEUS - Centro de Desarrollo Urbano Sustentable
 
+```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var titleSlide = document.querySelector('#title-slide') ||
@@ -161,3 +154,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+```

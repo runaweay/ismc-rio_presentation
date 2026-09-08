@@ -1,3 +1,9 @@
+#| column: screen
+#| fig-width: 16
+#| fig-height: 9
+#| out-width: "100%"
+#| fig-align: "center"
+
 # =========================================================================
 # Sampling points — Santiago de Chile
 # Basemap: CARTO Positron (greyscale)
@@ -12,7 +18,7 @@ library(maptiles)    # descarga de teselas
 library(tidyterra)   # geom_spatraster_rgb
 
 # --- Configuración -------------------------------------------------------
-MARGEN    <- 0.0015      # ~150 m de margen alrededor de los puntos
+MARGEN    <- 0.0004      # ~150 m de margen alrededor de los puntos
 TILE_ZOOM <- 17         # nivel de zoom de las teselas (17 = más detalle)
 OUTFILE   <- "plots/puntos.png"
 
@@ -40,7 +46,7 @@ bb["ymax"] <- bb["ymax"] + MARGEN
 # --- 3. Basemap ----------------------------------------------------------
 carto_grey <- list(
   src = "carto_positron",
-  q   = "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png?key={apikey}",
+  q   = "https://cartocdn.com{z}/{x}/{y}.png?key={apikey}",
   sub = NA,
   cit = "© OpenStreetMap contributors © CARTO"
 )
@@ -96,14 +102,13 @@ p <- ggplot() +
 # --- 5. Guardar ----------------------------------------------------------
 dir.create(dirname(OUTFILE), showWarnings = FALSE, recursive = TRUE)
 
+# Ajustado para formato 16:9 de alta resolucao
 ggsave(
   filename = OUTFILE,
   plot     = p,
   device   = "png",
-  height   = 7,
+  height   = 9,
   width    = 6,
   dpi      = 300,
-  bg       = COL_FONDO
+  bg       = "white"
 )
-
-p

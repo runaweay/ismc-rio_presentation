@@ -29,7 +29,8 @@ p <- ggplot(sl, aes(prof, valor, colour = grupo)) +
   theme_bw(base_size = 25) +
   theme(panel.grid.minor = element_blank(),
         strip.background = element_rect(fill = "grey95", colour = NA),
-        legend.position = "bottom")
+        legend.position = "bottom",
+        panel.spacing = unit(2.5, "lines"))   # aumenta o espaço entre os painéis
 
 p
-ggsave("plots/dotplot_mean_se.png", p, width = 11, height = 4, dpi = 300)
+ggsave("plots/dotplot_mean_se.png", p, width = 16, height = 4.5, dpi = 300)
