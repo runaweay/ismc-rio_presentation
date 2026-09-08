@@ -28,7 +28,7 @@
 .reveal .slides section > h2 {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 /* Title slide: h1.title, h1.subtitle, h2.author, h3.date inside
@@ -159,15 +159,15 @@
   padding: 0 20px 0 30px;
 }
 .methods-text-area {
-  width: 300px;
+  width: 400px;
   flex-shrink: 0;
-  font-size: 0.38em;
+  font-size: 0.50em;
   line-height: 1.35;
   text-align: left;
 }
 .methods-image-area {
-  width: 580px;
-  height: 560px;
+  width: 800px;
+  height: 800px;
   flex-shrink: 0;
   overflow: hidden;
 }

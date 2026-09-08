@@ -74,17 +74,22 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 :::
 
 ::: methods-image-area
-<img src="plots/puntos.png" alt="Sampling points map"/>
+<img src="plots/south_america.png" alt="Sampling points map"/>
 :::
 :::::
 
 ## Results
 
-![](plots/dotplot_mean_se.png){fig-align="center" width="920"}
+<div style="margin-top: 100px;">
+![](plots/dotplot_mean_se.png){fig-align="center" width="900"}
+</div>
 
 ## Results - Chilean soils background
 
-![](plots/steinfort.png){fig-align="center" width="700"}
+<div style="margin-top: 100px;">
+![](plots/steinfort.png){fig-align="center" width="900"}
+</div>
+
 
 ## Implications for urban C budgets {.spaced-list}
 

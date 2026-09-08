@@ -75,12 +75,28 @@ rm_comunas <- chilemapas::mapa_comunas |>
   filter(codigo_region == "13") |>
   st_as_sf()
 
+rm_comunas <- chilemapas::mapa_comunas |>
+  left_join(
+    chilemapas::codigos_territoriales |>
+      select(codigo_comuna, nombre_comuna),
+    by = "codigo_comuna"
+  ) |>
+  filter(codigo_region == "13") |>
+  st_as_sf()
+
+bbox_rm <- st_bbox(rm_comunas)
+centro_x <- mean(c(bbox_rm["xmin"], bbox_rm["xmax"]))
+centro_y <- mean(c(bbox_rm["ymin"], bbox_rm["ymax"]))
+largura  <- max(bbox_rm["xmax"] - bbox_rm["xmin"], bbox_rm["ymax"] - bbox_rm["ymin"]) / 2 * 1.05
+
 map_rm <- ggplot(rm_comunas) +
   geom_sf(aes(fill = nombre_comuna == "Santiago"), colour = "grey40", linewidth = 0.15) +
-  scale_fill_manual(values = c("TRUE" = "gold1", "FALSE" = "grey85"), guide = "none") +
+  scale_fill_manual(values = c("TRUE" = "#C1502E", "FALSE" = "grey85"), guide = "none") +
   annotation_scale(location = "bl", text_cex = 0.7) +
   annotation_north_arrow(location = "tr", style = north_arrow_minimal(),
                          height = unit(1, "cm"), width = unit(1, "cm")) +
+  coord_sf(xlim = c(centro_x - largura, centro_x + largura),
+           ylim = c(centro_y - largura, centro_y + largura)) +
   theme_bw() +
   theme(panel.grid = element_blank(),
         axis.title = element_blank(),
