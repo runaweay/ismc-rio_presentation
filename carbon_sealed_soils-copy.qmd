@@ -115,15 +115,13 @@ Pereira, M.C., O’Riordan, R. & Stevens, C. 2021. Urban soil microbial communit
 
 - Thank you for your attention! I am happy to take any questions.
 
-## Thank you! {data-background-color="#EECFA1"}
+## Thank you! {data-background-color="#FFF5EE"}
 
 **Mariana Dos Santos Moreno**
 
 *mdsmoreno\@estudiante.uc.cl*
 
-Facultad de Agronomía y Sistemas Naturales, PUC Chile
-
-CEDEUS - Centro de Desarrollo Urbano Sustentable
+- All code, results, and maps for this work are available on GitHub: **[github.com/runaweay/ismc-rio_presentation](https://github.com/runaweay/ismc-rio_presentation)** - The project is built with Quarto and R, and should run in any environment with R and the required packages installed (RStudio, VS Code, Positron, etc).
 
 ```{=html}
 <script>
